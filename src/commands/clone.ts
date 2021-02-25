@@ -15,6 +15,6 @@ export default class Clone extends BaseCommand {
     async run(): Promise<void> {
         const flags = this.parsedFlags as OutputFlags<typeof Clone.flags>;
         const args = this.parsedArgs!;
-        console.log(flags, args)
+        console.log(flags, args);
     }
 }

@@ -1,5 +1,7 @@
 import { Command, flags } from '@oclif/command';
+import { } from 'micromatch';
 import { Input, OutputArgs, OutputFlags } from '@oclif/parser';
+import { GitLabProject } from './types';
 
 export default abstract class BaseCommand extends Command {
     static flags = {
@@ -19,5 +21,9 @@ export default abstract class BaseCommand extends Command {
         const { args, flags } = this.parse(this.constructor as Input<typeof BaseCommand.flags>);
         this.parsedArgs = args;
         this.parsedFlags = flags;
+    }
+
+    protected getAllProjects(): GitLabProject[] {
+        return []
     }
 }
