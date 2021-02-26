@@ -28,15 +28,27 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`gitlab-commander clone`](#gitlab-commander-clone)
+* [`gitlab-commander clone [DEST]`](#gitlab-commander-clone-dest)
 * [`gitlab-commander help [COMMAND]`](#gitlab-commander-help-command)
 
-## `gitlab-commander clone`
+## `gitlab-commander clone [DEST]`
 
 describe the command here
 
 ```
-formatCommand
+USAGE
+  $ gitlab-commander clone [DEST]
+
+ARGUMENTS
+  DEST  destination directory to clone [default: ./]
+
+OPTIONS
+  -r, --recursive        clone recursively including submodules
+  -a, --address=address  address of the GitLab server (ENV: GITLAB_ADDRESS) [default: htts://gitlab.com]
+  -t, --token=token      GitLab access token (ENV: GITLAB_TOKEN)
+  -i, --include=include  comma delimited list of glob patterns of paths to projects or groups to include
+  -e, --exclude=exclude  comma delimited list of glob patterns of paths to projects or groups to exlude
+  -h, --help             show CLI help
 ```
 
 _See code: [src/commands/clone.ts](https://github.com/mnthe/gitlab-commander/blob/v0.0.1/src/commands/clone.ts)_
@@ -46,7 +58,14 @@ _See code: [src/commands/clone.ts](https://github.com/mnthe/gitlab-commander/blo
 display help for gitlab-commander
 
 ```
-formatCommand
+USAGE
+  $ gitlab-commander help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_

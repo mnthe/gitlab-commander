@@ -98,7 +98,8 @@ export default class CommandHelp {
         const body = renderList(args.map(a => {
             const name = a.name.toUpperCase()
             let description = a.description || ''
-            if (a.default) description = `[default: ${a.default}] ${description}`
+            // FIX: move default to right
+            if (a.default) description = `${description} [default: ${a.default}]`
             if (a.options) description = `(${a.options.join('|')}) ${description}`
             return [name, description ? dim(description) : undefined]
         }), { stripAnsi: this.opts.stripAnsi, maxWidth: this.opts.maxWidth - 2 })
