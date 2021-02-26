@@ -3,7 +3,7 @@ import { OutputFlags, OutputArgs } from '@oclif/parser';
 import Command from '../base';
 
 export default class Clone extends Command {
-    static description = 'describe the command here'
+    static description = 'Clone GitLab projects that fit the glob pattern'
 
     static flags = {
         recursive: flags.boolean({ char: 'r', description: 'clone recursively including submodules' }),

@@ -33,7 +33,7 @@ USAGE
 
 ## `gitlab-commander clone [DEST]`
 
-describe the command here
+Clone GitLab projects that fit the glob pattern
 
 ```
 USAGE
