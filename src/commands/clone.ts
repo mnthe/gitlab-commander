@@ -1,5 +1,4 @@
 import { flags } from '@oclif/command';
-import { OutputFlags, OutputArgs } from '@oclif/parser';
 import Command from '../base';
 
 export default class Clone extends Command {
@@ -16,8 +15,6 @@ export default class Clone extends Command {
     ];
 
     async run(): Promise<void> {
-        this.parsedArgs
-        this.parsedFlags
-        console.log(this.parsedArgs, this.parsedFlags);
+
     }
 }
